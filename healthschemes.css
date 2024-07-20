@@ -1,0 +1,703 @@
+
+.wrapper {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  width: 100%;
+  margin: 0; /* Center the wrapper horizontally */
+}
+
+.horizontal-header {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background:rgba(23,162,184,0.3) ;
+  background-color: rgba(23,162,184,0.3); /* Example background color */
+  color: #fff; /* Example text color */
+  padding: 20px;
+}
+
+/* .horizontal-header .logo a {
+  color: #fff; 
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px; 
+} */
+
+.horizontal-header h1 {
+  margin: 10px 0 0;
+  font-size: 24px; /* Example font size for the page title */
+  text-align: center;
+  align-items: center;
+}
+
+/* Optional: Add some padding to the wrapper content */
+.wrapper section {
+  padding: 20px;
+}
+
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+body{
+  padding: 0;
+  margin: 0;
+  background: rgba(23,162,184,0.3);
+}
+h2{
+  font-family: 'Poppins', sans-serif;
+  margin-left: 35px;
+  margin-top: 15px;
+}
+}
+::selection{
+  background: rgba(23,162,184,0.3);
+}
+.wrapper{
+  display: flex;
+  max-width: 100%;
+  height: 100vh;
+ 
+}
+/* .menu {
+  width: 600px;
+  background: #333;
+  color: #fff;
+  padding-top: 60px;
+}
+
+.menu a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.3s;
+} */
+
+/* .menu a:hover {
+  background: rgba(23,162,184,0.3);
+} */
+
+.content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.wrapper header{
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+
+.wrapper nav{
+  position: relative;
+  width: 80%;
+  height: 50px;
+  display: flex;
+  margin-left: 55px;
+  margin-top: 10px;
+}
+.wrapper nav label{
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: #17a2b8;
+  font-size: 17px;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+.wrapper nav label:hover{
+  background: rgba(23,162,184,0.3);
+}
+
+/*first box */
+#Description:checked ~ nav label.Description,
+#Benefits:checked ~ nav label.Benefits,
+#Eligibility:checked ~ nav label.Eligibility,
+#Documents:checked ~ nav label.Documents,
+  #Process:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*second box*/
+#Description1:checked ~ nav label.Description,
+#Benefits1:checked ~ nav label.Benefits,
+#Eligibility1:checked ~ nav label.Eligibility,
+#Documents1:checked ~ nav label.Documents,
+  #Process1:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*third box*/
+#Description2:checked ~ nav label.Description,
+#Benefits2:checked ~ nav label.Benefits,
+#Eligibility2:checked ~ nav label.Eligibility,
+#Documents2:checked ~ nav label.Documents,
+  #Process2:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*4th box*/
+#Description3:checked ~ nav label.Description,
+#Benefits3:checked ~ nav label.Benefits,
+#Eligibility3:checked ~ nav label.Eligibility,
+#Documents3:checked ~ nav label.Documents,
+  #Process2:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*5th box*/
+#Description4:checked ~ nav label.Description,
+#Benefits4:checked ~ nav label.Benefits,
+#Eligibility4:checked ~ nav label.Eligibility,
+#Documents4:checked ~ nav label.Documents,
+  #Process4:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*6th box*/
+#Description5:checked ~ nav label.Description,
+#Benefits5:checked ~ nav label.Benefits,
+#Eligibility5:checked ~ nav label.Eligibility,
+#Documents5:checked ~ nav label.Documents,
+  #Process5:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*7th box*/
+#Description6:checked ~ nav label.Description,
+#Benefits6:checked ~ nav label.Benefits,
+#Eligibility6:checked ~ nav label.Eligibility,
+#Documents6:checked ~ nav label.Documents,
+  #Process6:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*8th box*/
+#Description7:checked ~ nav label.Description,
+#Benefits7:checked ~ nav label.Benefits,
+#Eligibility7:checked ~ nav label.Eligibility,
+#Documents7:checked ~ nav label.Documents,
+  #Process7:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*9th box*/
+#Description8:checked ~ nav label.Description,
+#Benefits8:checked ~ nav label.Benefits,
+#Eligibility8:checked ~ nav label.Eligibility,
+#Documents8:checked ~ nav label.Documents,
+  #Process8:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*10th box*/
+#Description9:checked ~ nav label.Description,
+#Benefits9:checked ~ nav label.Benefits,
+#Eligibility9:checked ~ nav label.Eligibility,
+#Documents9:checked ~ nav label.Documents,
+  #Process9:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*11th box*/
+#Description10:checked ~ nav label.Description,
+#Benefits10:checked ~ nav label.Benefits,
+#Eligibility10checked ~ nav label.Eligibility,
+#Documents10:checked ~ nav label.Documents,
+  #Process10:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*12th box*/
+#Description11:checked ~ nav label.Description,
+#Benefits11:checked ~ nav label.Benefits,
+#Eligibility11checked ~ nav label.Eligibility,
+#Documents11:checked ~ nav label.Documents,
+  #Process11:checked ~ nav label.Process{
+  color: #fff;
+}
+
+/*13th box*/
+#Description12:checked ~ nav label.Description,
+#Benefits12:checked ~ nav label.Benefits,
+#Eligibility12checked ~ nav label.Eligibility,
+#Documents12:checked ~ nav label.Documents,
+  #Process12:checked ~ nav label.Process{
+  color: #fff;
+}
+
+nav label i{
+  padding-right: 7px;
+}
+
+nav .slider{
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: #17a2b8;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+/*first box*/
+#Benefits:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents:checked ~ nav .slider{
+  left: 60%;
+}
+#Process:checked ~ nav .slider{
+  left: 80%;
+}
+
+/*second box*/
+#Benefits1:checked ~ nav .slider{
+    left: 20%;
+  }
+  #Eligibility1:checked ~ nav .slider{
+    left: 40%;
+  }
+  #Documents1:checked ~ nav .slider{
+    left: 60%;
+  }
+  #Process1:checked ~ nav .slider{
+    left: 80%;
+  }
+
+
+/*third box*/
+#Benefits2:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility2:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents2:checked ~ nav .slider{
+  left: 60%;
+}
+#Process2:checked ~ nav .slider{
+  left: 80%;
+}
+
+
+/*fourth box*/
+#Benefits3:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility3:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents3:checked ~ nav .slider{
+  left: 60%;
+}
+#Process3:checked ~ nav .slider{
+  left: 80%;
+}
+
+
+/*five box*/
+#Benefits4:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility4:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents4:checked ~ nav .slider{
+  left: 60%;
+}
+#Process4:checked ~ nav .slider{
+  left: 80%;
+}
+
+/*six box*/
+#Benefits5:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility5:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents5:checked ~ nav .slider{
+  left: 60%;
+}
+#Process5:checked ~ nav .slider{
+  left: 80%;
+}
+
+/*seven box*/
+#Benefits6:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility6:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents6:checked ~ nav .slider{
+  left: 60%;
+}
+#Process6:checked ~ nav .slider{
+  left: 80%;
+}
+
+
+/*eight box*/
+#Benefits7:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility7:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents7:checked ~ nav .slider{
+  left: 60%;
+}
+#Process7:checked ~ nav .slider{
+  left: 80%;
+}
+
+
+/*nine box*/
+#Benefits8:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility8:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents8:checked ~ nav .slider{
+  left: 60%;
+}
+#Process8:checked ~ nav .slider{
+  left: 80%;
+}
+
+/*tenth box*/
+#Benefits9:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility9:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents9:checked ~ nav .slider{
+  left: 60%;
+}
+#Process9:checked ~ nav .slider{
+  left: 80%;
+}
+
+/*11th box*/
+#Benefits10:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility10:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents10:checked ~ nav .slider{
+  left: 60%;
+}
+#Process10:checked ~ nav .slider{
+  left: 80%;
+}
+
+/*12th box*/
+#Benefits11:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility11:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents11:checked ~ nav .slider{
+  left: 60%;
+}
+#Process11:checked ~ nav .slider{
+  left: 80%;
+}
+
+/*13th box*/
+#Benefits12:checked ~ nav .slider{
+  left: 20%;
+}
+#Eligibility12:checked ~ nav .slider{
+  left: 40%;
+}
+#Documents12:checked ~ nav .slider{
+  left: 60%;
+}
+#Process12:checked ~ nav .slider{
+  left: 80%;
+}
+
+
+
+
+
+section .content{ 
+  display: none;
+  background: #ffffff;
+  padding: 20px;
+  margin-left: 35px;
+  margin-right: 35px;
+  border-radius: 1rem;
+}
+
+section .content1{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+  }
+
+  section .content2{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+  section .content3{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+  section .content4{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+  section .content5{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+  section .content6{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+  section .content7{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+
+  section .content8{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+
+  section .content9{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+  section .content10{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+  section .content11{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+  section .content12{
+    display: none;
+    background: #ffffff;
+    padding: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 1rem;
+  }
+
+
+
+
+
+
+
+#Description ~ section .content-1,
+#Benefits:checked ~ section .content-2,
+#Eligibility:checked ~ section .content-3,
+#Documents:checked ~ section .content-4,
+#Process:checked ~ section .content-5{
+  display: block;
+}
+
+#Description1 ~ section .content-6,
+#Benefits1:checked ~ section .content-7,
+#Eligibility1:checked ~ section .content-8,
+#Documents1:checked ~ section .content-9,
+#Process1:checked ~ section .content-10{
+  display: block;
+}
+
+#Description2 ~ section .content-11,
+#Benefits2:checked ~ section .content-12,
+#Eligibility2:checked ~ section .content-13,
+#Documents2:checked ~ section .content-14,
+#Process2:checked ~ section .content-15{
+  display: block;
+}
+
+#Description3 ~ section .content-16,
+#Benefits3:checked ~ section .content-17,
+#Eligibility3:checked ~ section .content-18,
+#Documents3:checked ~ section .content-19,
+#Process3:checked ~ section .content-20{
+  display: block;
+}
+
+#Description4 ~ section .content-21,
+#Benefits4:checked ~ section .content-22,
+#Eligibility4:checked ~ section .content-23,
+#Documents4:checked ~ section .content-24,
+#Process4:checked ~ section .content-25{
+  display: block;
+}
+
+#Description5 ~ section .content-26,
+#Benefits5:checked ~ section .content-27,
+#Eligibility5:checked ~ section .content-28,
+#Documents5:checked ~ section .content-29,
+#Process5:checked ~ section .content-30{
+  display: block;
+}
+
+#Description6 ~ section .content-31,
+#Benefits6:checked ~ section .content-32,
+#Eligibility6:checked ~ section .content-33,
+#Documents6:checked ~ section .content-34,
+#Process6:checked ~ section .content-35{
+  display: block;
+}
+
+#Description7 ~ section .content-36,
+#Benefits7:checked ~ section .content-37,
+#Eligibility7:checked ~ section .content-38,
+#Documents7:checked ~ section .content-39,
+#Process7:checked ~ section .content-40{
+  display: block;
+}
+
+#Description8 ~ section .content-41,
+#Benefits8:checked ~ section .content-42,
+#Eligibility8:checked ~ section .content-43,
+#Documents8:checked ~ section .content-44,
+#Process8:checked ~ section .content-45{
+  display: block;
+}
+
+#Description9 ~ section .content-46,
+#Benefits9:checked ~ section .content-47,
+#Eligibility9:checked ~ section .content-48,
+#Documents9:checked ~ section .content-49,
+#Process9:checked ~ section .content-50{
+  display: block;
+}
+
+#Description10 ~ section .content-51,
+#Benefits10:checked ~ section .content-52,
+#Eligibility10:checked ~ section .content-53,
+#Documents10:checked ~ section .content-54,
+#Process10:checked ~ section .content-55{
+  display: block;
+}
+
+#Description11 ~ section .content-56,
+#Benefits11:checked ~ section .content-57,
+#Eligibility11:checked ~ section .content-58,
+#Documents11:checked ~ section .content-59,
+#Process11:checked ~ section .content-60{
+  display: block;
+}
+
+#Description12 ~ section .content-61,
+#Benefits12:checked ~ section .content-62,
+#Eligibility12:checked ~ section .content-63,
+#Documents12:checked ~ section .content-64,
+#Process12:checked ~ section .content-65{
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section .content .title{
+  font-size: 21px;
+  font-weight: 500;
+  margin: 30px 0 10px 0;
+}
+
+section .content p{
+  text-align: justify;
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form</title>
+      <link rel="stylesheet" href="signup.css">
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login
+            </div>
+            <div class="title signup">
+                Register
+            </div>
+         </div>
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Register</label>
+               <div class="slider-tab"></div>
+            </div>
+            <!--login form starts-->
+            <div class="form-inner">
+               <form action="#" class="login" id="contactForm">
+                
+                  <!--div class="alert">Your message sent</div-->
+
+                  <div class="field">
+                     <input type="email" id="email" placeholder="Email Address" required>
+                  </div>
+
+                  <div class="field">
+                     <input type="password" id="password" placeholder="Password" required>
+                  </div>
+
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" onclick="submitLoginForm()" value="Login" href="home.html">
+                     <!-- <button type="button" onclick="submitLoginForm()" value="Login"></button> -->
+                  </div> 
+
+                  <!-- <div class="field">
+                    <button type="submit">Submit</button>
+                  </div> -->
+
+                  <div class="signup-link">
+                     Not a member? <a href="">Signup now</a>
+                  </div>
+
+               </form>
+               <!--login form ends-->
+
+               <!-- //register form starts -->
+               <form action="#" class="signup" id="registerForm">
+
+                  <!-- <div class="alert">Registration succesfull!</div> -->
+
+                  <div class="field">
+                    <input type="text" id="name" placeholder="Name" required>
+                 </div>
+
+                  <div class="field">
+                     <input type="text" id="emailid" placeholder="Email Address" required>
+                  </div>
+
+                  <div class="field">
+                    <input type="phone number" id="phno" placeholder="phone number" required>
+                 </div>
+
+                 <div class="field">
+                    <input type="Aadhar card number" id="aadhar" placeholder="Aadhar card number" required>
+                 </div>
+
+                  <div class="field">
+                     <input type="age" id="age" placeholder="age" required>
+                  </div>
+
+                  <div class="field">
+                     <input type="password" id="setpass" placeholder="set password" required>
+                  </div>
+
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" onclick="submitRegisterForm()" value="Signup">
+                     <!-- <button type="button" onclick="submitRegisterForm()" value="Signup"></button> -->
+                  </div>
+
+               </form>
+               <!-- //register from ends -->
+            </div>
+         </div>
+      </div>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script>
+         const firebaseConfig = {
+               apiKey: "AIzaSyCJpGnmrNUW7kxyIvuaXM8nt6mQ7iBuYlY",
+               authDomain: "login-form-f4089.firebaseapp.com",
+               databaseURL: "https://login-form-f4089-default-rtdb.firebaseio.com",
+               projectId: "login-form-f4089",
+               storageBucket: "login-form-f4089.appspot.com",
+               messagingSenderId: "495092010852",
+               appId: "1:495092010852:web:5e20b660332b2519c4b471"
+         };
+  
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+  
+         // Reference your database
+         var contactFormDB = firebase.database().ref("contactForm");
+         var registerFormDB = firebase.database().ref("registerForm");
+
+         // Get a reference to the Authentication module
+         //const auth = getAuth(firebaseApp);
+  
+         //document.getElementById("contactForm").addEventListener("submit", submitLoginForm);
+         //document.getElementById("registerForm").addEventListener("submit", submitRegisterForm);
+
+         document.getElementById("contactForm").addEventListener("submit", function (e) {
+         submitLoginForm(e);
+         });
+
+         document.getElementById("registerForm").addEventListener("submit", function (e) {
+         submitRegisterForm(e);
+         });
+
+         function submitLoginForm(e) {
+         e.preventDefault();
+  
+         // Login form inputs
+         var email = getElementVal("email");
+         var password = getElementVal("password");
+    
+         // Validate the email
+         if (!validateEmail(email)) {
+             alert("Please enter a valid email address");
+             return;
+         }
+
+         if (!validatePassword(password)) {
+             alert("Password must be at least 6 characters and include lowercase, uppercase, and special characters");
+             return;
+         }
+
+         // Authenticate the user
+         firebase.auth().signInWithEmailAndPassword(email, password)
+           .then((userCredential) => {
+             const user = userCredential.user;
+             // Optional: Add any additional actions after successful login
+             console.log("Login successful:", user.uid);
+             alert("Login successful!");
+            })
+           .catch((error) => {
+             alert("Login failed!");
+            });
+  
+         // Enable alert
+         document.querySelector(".alert").style.display = "block";
+
+         // Remove the alert
+         setTimeout(() => {
+           document.querySelector(".alert").style.display = "none";
+         }, 3000);
+  
+         // Reset the form
+         document.getElementById("contactForm").reset();
+         }
+  
+         function submitRegisterForm(e) {
+           e.preventDefault();
+         
+           // Register form inputs
+           var name = getElementVal("name");
+           var emailid = getElementVal("emailid");
+           var phoneno = getElementVal("phno");
+           var aadharno = getElementVal("aadhar");
+           var age = getElementVal("age");
+           var setpass = getElementVal("setpass");
+         
+           // Validate the email
+           if (!validateEmail(emailid)) {
+               alert("Please enter a valid email address");
+               return;
+           }
+
+           if (!validatePhone(phoneno)) {
+               alert("Please enter valid phone number");
+               return;
+           }
+        
+           if (!validateAadhar(aadharno)) {
+               alert("Please enter valid aadhar number");
+               return;
+            }
+
+           if (!validatePassword(setpass)) {
+               alert("Password must be at least 6 characters and include lowercase, uppercase, and special characters");
+               return;
+           }
+
+         // Register the user
+         firebase.auth().createUserWithEmailAndPassword(emailid, setpass)
+           .then((userCredential) => {
+             const user = userCredential.user;
+             // Save additional user information to the database
+             saveInfo(name, phoneno, aadharno, age);
+             console.log("Registration successful:", user.uid);
+           })
+           .catch((error) => {
+             alert("Registration failed: " + error.message);
+           });
+  
+         // Enable alert
+         document.querySelector(".alert").style.display = "block";
+
+         // Remove the alert
+         setTimeout(() => {
+           document.querySelector(".alert").style.display = "none";
+         }, 3000);
+  
+         // Reset the form
+         ocument.getElementById("registerForm").reset();
+      }
+
+// const saveMessages = (email, password) => {
+//     var newContactForm = contactFormDB.push();
+  
+//     newContactForm.set({
+//       email: email,
+//       password: password,
+//     });
+  
+//     console.log("Login data saved to the database!");
+//   };
+  
+
+      const saveInfo = (name, phoneno, aadharno, age) => {
+        var newRegisterForm = registerFormDB.push();
+      
+        newRegisterForm.set({
+          name : name,
+          //emailid: emailid,
+          phoneno: phoneno,
+          aadharno: aadharno,
+          age: age,
+          //setpass: setpass,
+        });
+      
+        console.log("Register data saved to the database!");
+      };
+  
+      const getElementVal = (id) => {
+         return document.getElementById(id).value;
+      };
+
+         function validatePassword(password) {
+            // Password must contain at least 6 characters,
+            // one lowercase letter, one uppercase letter, and one special character
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+            return passwordRegex.test(password);
+         }
+
+         function validatePassword(setpassword) {
+            // Password must contain at least 6 characters,
+            // one lowercase letter, one uppercase letter, and one special character
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+            return passwordRegex.test(setpassword);
+         }
+
+         function validateEmail(email) {
+            // Email must contain '@', only lowercase letters, and '.' with 2 or 3 characters after it
+            const emailRegex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+            return emailRegex.test(email);
+         }
+
+         function validateEmail(emailid) {
+            // Email must contain '@', only lowercase letters, and '.' with 2 or 3 characters after it
+            const emailRegex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+            return emailRegex.test(emailid);
+         }
+
+         function validateAadhar(aadharno) {
+            // Aadhar must contain exactly 12 numerical characters
+            const aadharRegex = /^\d{12}$/;
+            return aadharRegex.test(aadharno);
+         }
+
+         function validatePhone(phoneno) {
+            // Phone no must contain exactly 10 numerical characters
+            const aadharRegex = /^\d{10}$/;
+            return aadharRegex.test(phoneno);
+         }
+</script>
+
+      <script>
+        const loginText = document.querySelector(".title-text .login");
+                   const loginForm = document.querySelector("form.login");
+                   const loginBtn = document.querySelector("label.login");
+                   const signupBtn = document.querySelector("label.signup");
+                   const signupLink = document.querySelector("form .signup-link a");
+                   signupBtn.onclick = (()=>{
+                     loginForm.style.marginLeft = "-50%";
+                     loginText.style.marginLeft = "-50%";
+                    });
+                   loginBtn.onclick = (()=>{
+                     loginForm.style.marginLeft = "0%";
+                     loginText.style.marginLeft = "0%";
+                   });
+                   signupLink.onclick = (()=>{
+                     signupBtn.click();
+                     return false;
+                    });
+      </script>
+   </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+    responsive card
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  type="text/css" href="sec.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=d0zB1861Kbikxbh94xyVn6sXC09oO68YEkbivM6OYD4yo0reGpxbJRQ0gTUoDkcB" charset="UTF-8"></script><script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"> </script>
+  </head>
+<div>
+  
+
+
+<!--header-->
+
+<nav>
+    <div class="nav-content">
+      <div class="logo">
+        <a href="#">GOVERNMENT</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+</nav>
+<script>
+  let nav = document.querySelector("nav");
+    window.onscroll = function() {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      }else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+
+
+  <div class="about-us">
+     <h1>ABOUT US</h1><br>
+          <p>MyScheme is a National Platform that aims to offer one-stop search and discovery of the Government schemes.<br><br>It provides an innovative, technology-based solution to discover scheme information based upon the eligibility of the citizen.<br><br>The platform helps the citizen to find the right Government schemes for them. It also guides on how to apply for different Government schemes. Thus no need to visit multiple Government websites.</p>
+  </div>
+
+<!-- blog-card -->
+
+<!--<div class="blog-card">
+  <input type="radio" name="select" id="tap-1" checked>
+  <input type="radio" name="select" id="tap-2">
+  <input type="radio" name="select" id="tap-3">
+  <input type="checkbox" id="imgTap">
+  <div class="sliders">
+     <label for="tap-1" class="tap tap-1"></label>
+     <label for="tap-2" class="tap tap-2"></label>
+     <label for="tap-3" class="tap tap-3"></label>
+  </div>
+  <div class="inner-part">
+     <label for="imgTap" class="img">
+     <img class="img-1" src="https://assets.thehansindia.com/h-upload/2022/02/05/1600x960_1205071-karnataka-government.jpg">
+     </label>
+     <div class="content content-1">
+        <span>26 December 2017</span>
+        <div class="title">
+           Lorem Ipsum Dolor
+        </div>
+        <div class="text">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo animi atque aliquid pariatur voluptatem numquam, quisquam. Neque est voluptates doloribus!
+        </div>
+        <button>Read more</button>
+     </div>
+  </div>
+  <div class="inner-part">
+     <label for="imgTap" class="img">
+     <img class="img-2" src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-223438,resizemode-75,msid-102235826/news/india/karnataka-govt-committed-to-implementing-kasturirangan-panel-report.jpg">
+     </label>
+     <div class="content content-2">
+        <span>26 December 2018</span>
+        <div class="title">
+           Lorem Ipsum Dolor
+        </div>
+        <div class="text">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eos ut consectetur numquam ullam fuga animi laudantium nobis rem molestias.
+        </div>
+        <button>Read more</button>
+     </div>
+  </div>
+  <div class="inner-part">
+     <label for="imgTap" class="img">
+     <img class="img-3" src="https://www.freshershome.com/wp-content/uploads/2018/12/Karnataka-Government-Logo-img.png">
+     </label>
+     <div class="content content-3">
+        <span>26 December 2019</span>
+        <div class="title">
+           Lorem Ipsum Dolor
+        </div>
+        <div class="text">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod excepturi nemo commodi sint eum ipsam odit atque aliquam officia impedit.
+        </div>
+        <button>Read more</button>
+     </div>
+  </div>
+</div>-->
+
+
+<!-- card-container -->
+
+<div class="card-container">
+    <div class="card">
+      <img src="health.png">
+      <div class="card-content">
+        <h1>HEALTH</h1>
+        <P>Commit yourself to be healthy and fit.</P>
+        <A href="" class="card-button" style="color: rgb(255,255,255);"> click here</A>
+      </div>
+
+    </div><div class="card">
+      <img src="court.png">
+      <div class="card-content">
+        <h1>COURT</h1>
+        <P>We’re committed to your justice of court.</P>
+        <A href="" class="card-button" style="color: rgb(255,255,255);"> click here</A>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="education.png">
+      <div class="card-content">
+        <h1>EDUCATION</h1>
+        <P>Better education equals a better nation</P>
+        <A href="" class="card-button" style="color: rgb(255,255,255);"> click here</A>
+      </div>
+    </div>
+    <div class="card">
+      <img src="health.png">
+      <div class="card-content">
+        <h1>HEALTH</h1>
+        <P>Commit yourself to be healthy and fit.</P>
+        <A href="" class="card-button" style="color: rgb(255,255,255);"> click here</A>
+      </div>
+    </div><div class="card">
+      <img src="court.png">
+      <div class="card-content">
+        <h1>COURT</h1>
+        <P>We’re committed to your justice of court.</P>
+        <A href="" class="card-button" style="color: rgb(255,255,255);"> click here</A>
+      </div>
+    </div>
+    <div class="card">
+      <img src="education.png">
+      <div class="card-content">
+        <h1>EDUCATION</h1>
+        <P>Better education equals a better nation</P>
+        <A href="" class="card-button" style="color: rgb(255,255,255);"> click here</A>
+      </div>
+    </div>
+</div>
+  
+  
+<!-- <div class="search-box">
+  <input class="search-txt" type="text" name="" placeholder="Type to search">
+  <a class="search-btn" href="#"></a>
+  <i class="fas fa-search"></i>
+</div> -->
+
+<!-- footer -->
+
+  <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Website Policies</a></li>
+          <li><a href="">Terms of Use</a></li>
+          <li><a href="">Help</a></li>
+          <li><a href="">Feedback</a></li>
+        </ul>
+        
+      </div>
+    </div>
+    <div class="footerBottom">
+      <p>Copyright &copy;2023; Designed by <span class="designer"> Team code crew</span></p>
+    </div>
+  </footer>
+
+
+
+    
+
+    
+  
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
